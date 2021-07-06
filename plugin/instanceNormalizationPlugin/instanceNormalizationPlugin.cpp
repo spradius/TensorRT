@@ -134,10 +134,7 @@ InstanceNormalizationPlugin::InstanceNormalizationPlugin(void const* serialData,
     deserialize_value(&serialData, &serialLength, &_h_bias);
 }
 
-InstanceNormalizationPlugin::~InstanceNormalizationPlugin()
-{
-    #terminate();
-}
+InstanceNormalizationPlugin::~InstanceNormalizationPlugin() {}
 
 // InstanceNormalizationPlugin returns one output.
 int InstanceNormalizationPlugin::getNbOutputs() const
