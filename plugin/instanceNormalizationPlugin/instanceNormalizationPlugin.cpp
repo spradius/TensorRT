@@ -294,7 +294,7 @@ void InstanceNormalizationPlugin::detachFromContext()
 void InstanceNormalizationPlugin::configurePlugin(const nvinfer1::DynamicPluginTensorDesc* in, int nbInputs,
     const nvinfer1::DynamicPluginTensorDesc* out, int nbOutputs)
 {
-    auto input_dims = in[0].desc.dims;
+    auto input_dims = in[0].max;
 
     int n = input_dims.d[0];
     int c = input_dims.d[1];
